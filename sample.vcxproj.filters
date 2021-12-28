@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\STAGE1">
+      <UniqueIdentifier>{cd2871d6-4940-4806-807f-1ffc1f5ab6cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\STAGE2">
+      <UniqueIdentifier>{ce0234b1-9a5a-4c20-97f9-6b640a5823cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\COMMON">
+      <UniqueIdentifier>{58fdfdf4-86c1-4bd3-bd78-13f783e28750}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\GAME">
+      <UniqueIdentifier>{de19e71c-7968-4edd-8287-252d4891ac85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\SCEAN">
+      <UniqueIdentifier>{9d0a9737-47f2-4795-9f8f-0880ac66a9cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\SCEAN">
+      <UniqueIdentifier>{32ec5f5f-8aaa-41d9-ad6d-f0b4e6ab6459}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="renderer.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="fade.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="sound.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Keylogger.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="keyboard.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="game_1.cpp">
+      <Filter>ソース ファイル\STAGE1</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy_1.cpp">
+      <Filter>ソース ファイル\STAGE1</Filter>
+    </ClCompile>
+    <ClCompile Include="map_1.cpp">
+      <Filter>ソース ファイル\STAGE1</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy_2.cpp">
+      <Filter>ソース ファイル\STAGE2</Filter>
+    </ClCompile>
+    <ClCompile Include="game_2.cpp">
+      <Filter>ソース ファイル\STAGE2</Filter>
+    </ClCompile>
+    <ClCompile Include="map_2.cpp">
+      <Filter>ソース ファイル\STAGE2</Filter>
+    </ClCompile>
+    <ClCompile Include="collision.cpp">
+      <Filter>ソース ファイル\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>ソース ファイル\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>ソース ファイル\COMMON</Filter>
+    </ClCompile>
+    <ClCompile Include="game_over.cpp">
+      <Filter>ソース ファイル\SCEAN</Filter>
+    </ClCompile>
+    <ClCompile Include="result.cpp">
+      <Filter>ソース ファイル\SCEAN</Filter>
+    </ClCompile>
+    <ClCompile Include="scene.cpp">
+      <Filter>ソース ファイル\SCEAN</Filter>
+    </ClCompile>
+    <ClCompile Include="title.cpp">
+      <Filter>ソース ファイル\SCEAN</Filter>
+    </ClCompile>
+    <ClCompile Include="select_scene.cpp">
+      <Filter>ソース ファイル\SCEAN</Filter>
+    </ClCompile>
+    <ClCompile Include="patrol_1.cpp">
+      <Filter>ソース ファイル\STAGE1</Filter>
+    </ClCompile>
+    <ClCompile Include="slime_1.cpp">
+      <Filter>ソース ファイル\STAGE1</Filter>
+    </ClCompile>
+    <ClCompile Include="patrol_2.cpp">
+      <Filter>ソース ファイル\STAGE2</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="renderer.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="fade.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="input.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="sound.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="keyboard.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Keylogger.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="collision.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="map.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="game_over.h">
+      <Filter>ヘッダー ファイル\SCEAN</Filter>
+    </ClInclude>
+    <ClInclude Include="select_scene.h">
+      <Filter>ヘッダー ファイル\SCEAN</Filter>
+    </ClInclude>
+    <ClInclude Include="title.h">
+      <Filter>ヘッダー ファイル\SCEAN</Filter>
+    </ClInclude>
+    <ClInclude Include="result.h">
+      <Filter>ヘッダー ファイル\SCEAN</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>ヘッダー ファイル\SCEAN</Filter>
+    </ClInclude>
+    <ClInclude Include="patrol.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="slime.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
