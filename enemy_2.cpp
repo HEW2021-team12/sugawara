@@ -80,6 +80,7 @@ HRESULT InitEnemy2(void)
 			g_Enemy2[i].use = true;
 			g_Enemy2[i].pos.x = (CHIP_SIZE / 2) + CHIP_SIZE * 5;
 			g_Enemy2[i].pos.y = (CHIP_SIZE / 2) + CHIP_SIZE * 16;
+			g_Enemy2[i].routenom = 3;
 		}
 		// 二体目
 		if (i == 1)
@@ -87,6 +88,7 @@ HRESULT InitEnemy2(void)
 			g_Enemy2[i].use = false;
 			g_Enemy2[i].pos.x = (CHIP_SIZE / 2) + CHIP_SIZE * 4;
 			g_Enemy2[i].pos.y = (CHIP_SIZE / 2) + CHIP_SIZE * 7;
+			g_Enemy2[i].routenom = 0;
 		}
 		// 三体目
 		if (i == 2)
@@ -94,6 +96,7 @@ HRESULT InitEnemy2(void)
 			g_Enemy2[i].use = false;
 			g_Enemy2[i].pos.x = (CHIP_SIZE / 2) + CHIP_SIZE * 23;
 			g_Enemy2[i].pos.y = (CHIP_SIZE / 2) + CHIP_SIZE * 7;
+			g_Enemy2[i].routenom = 8;
 		}
 
 		// 共通
@@ -172,16 +175,38 @@ void UpdateEnemy2(void)
 			// 見つけていない
 			else
 			{
-				if (g_Enemy2[i].watch)
+				if (i == 0)
 				{
-					// 見失った時の処理（SE）
-					PlaySound(g_watch_lost_SE2, 0);
+					if (g_Enemy2[i].watch)
+					{
+						// 見失った時の処理（SE）
+						PlaySound(g_watch_lost_SE2, 0);
 
-					char work = rand() % ROOT_MAX;
+						char work = rand() % ROOT_MAX2;
 
-					g_Enemy2[i].routenom = work;
-					g_Enemy2[i].pos.x = SetRouteX2(work) * CHIP_SIZE + (CHIP_SIZE / 2);
-					g_Enemy2[i].pos.y = SetRouteY2(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+						g_Enemy2[i].routenom = work;
+						g_Enemy2[i].pos.x = SetRouteX2(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+						g_Enemy2[i].pos.y = SetRouteY2(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+
+					}
+				}
+			 
+				
+
+				if (i == 1)
+				{
+					if (g_Enemy2[i].watch)
+					{
+						// 見失った時の処理（SE）
+						PlaySound(g_watch_lost_SE2, 0);
+
+						char work = rand() % ROOT_MAX2_1;
+
+						g_Enemy2[i].routenom = work;
+						g_Enemy2[i].pos.x = SetRouteX2_1(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+						g_Enemy2[i].pos.y = SetRouteY2_1(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+
+					}
 				}
 
 				g_Enemy2[i].watch = false;
@@ -374,11 +399,12 @@ void WatchEnemy2(int i)
 			// 見失った時の処理（SE）
 			PlaySound(g_watch_lost_SE2, 0);
 
-			char work = rand() % ROOT_MAX;
+			char work = rand() % ROOT_MAX2;
 
 			g_Enemy2[i].routenom = work;
-			g_Enemy2[i].pos.x = SetRouteX(work) * CHIP_SIZE + (CHIP_SIZE / 2);
-			g_Enemy2[i].pos.y = SetRouteY(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+			g_Enemy2[i].pos.x = SetRouteX2(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+			g_Enemy2[i].pos.y = SetRouteY2(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+
 		}
 		if (g_Enemy2[i].movecntY)
 		{
@@ -387,11 +413,42 @@ void WatchEnemy2(int i)
 			// 見失った時の処理（SE）
 			PlaySound(g_watch_lost_SE2, 0);
 
-			char work = rand() % ROOT_MAX;
+			char work = rand() % ROOT_MAX2;
 
 			g_Enemy2[i].routenom = work;
-			g_Enemy2[i].pos.x = SetRouteX(work) * CHIP_SIZE + (CHIP_SIZE / 2);
-			g_Enemy2[i].pos.y = SetRouteY(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+			g_Enemy2[i].pos.x = SetRouteX2(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+			g_Enemy2[i].pos.y = SetRouteY2(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+
+		
+		}
+
+		if (g_Enemy2[i].movecntX)
+		{
+
+			g_Enemy2[i].movecntX = false;
+
+			// 見失った時の処理（SE）
+			PlaySound(g_watch_lost_SE2, 0);
+
+			char work = rand() % ROOT_MAX2_1;
+
+			g_Enemy2[i].routenom = work;
+			g_Enemy2[i].pos.x = SetRouteX2_1(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+			g_Enemy2[i].pos.y = SetRouteY2_1(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+		}
+
+		if (g_Enemy2[i].movecntY)
+		{
+			g_Enemy2[i].movecntY = false;
+
+			// 見失った時の処理（SE）
+			PlaySound(g_watch_lost_SE2, 0);
+
+			char work = rand() % ROOT_MAX2_1;
+
+			g_Enemy2[i].routenom = work;
+			g_Enemy2[i].pos.x = SetRouteX2_1(work) * CHIP_SIZE + (CHIP_SIZE / 2);
+			g_Enemy2[i].pos.y = SetRouteY2_1(work) * CHIP_SIZE + (CHIP_SIZE / 2);
 		}
 
 	}
@@ -418,7 +475,7 @@ void NoneWatchEnemy2(int i)
 					// 偶数 or 0
 					work++;
 					g_Enemy2[i].routenom++;
-					if (work >= ROOT_MAX)
+					if (work >= ROOT_MAX2)
 					{
 						work = 0;
 						g_Enemy2[i].routenom = 0;
@@ -431,8 +488,42 @@ void NoneWatchEnemy2(int i)
 					g_Enemy2[i].routenom--;
 					if (work < 0)
 					{
-						work = ROOT_MAX;
-						g_Enemy2[i].routenom = ROOT_MAX;
+						work = ROOT_MAX2;
+						g_Enemy2[i].routenom = ROOT_MAX2;
+					}
+				}
+
+
+			}
+		}
+
+
+		if (g_Enemy2[i].pos.x < g_RouteX2_1[work] * CHIP_SIZE + CHIP_SIZE &&
+			g_Enemy2[i].pos.x > g_RouteX2_1[work] * CHIP_SIZE)
+		{
+			if (g_Enemy2[i].pos.y < g_RouteY2_1[work] * CHIP_SIZE + CHIP_SIZE &&
+				g_Enemy2[i].pos.y > g_RouteY2_1[work] * CHIP_SIZE)
+			{
+				if (i % 2 == 0)
+				{
+					// 偶数 or 0
+					work++;
+					g_Enemy2[i].routenom++;
+					if (work >= ROOT_MAX2_1)
+					{
+						work = 0;
+						g_Enemy2[i].routenom = 0;
+					}
+				}
+				else
+				{
+					// 奇数
+					work--;
+					g_Enemy2[i].routenom--;
+					if (work < 0)
+					{
+						work = ROOT_MAX2_1;
+						g_Enemy2[i].routenom = ROOT_MAX2_1;
 					}
 				}
 
@@ -444,6 +535,8 @@ void NoneWatchEnemy2(int i)
 		D3DXVECTOR2 destination = D3DXVECTOR2(g_RouteX2[work] * CHIP_SIZE + (CHIP_SIZE / 2),
 			g_RouteY2[work] * CHIP_SIZE + (CHIP_SIZE / 2));
 
+
+		
 		//成分
 		D3DXVECTOR2 components;
 

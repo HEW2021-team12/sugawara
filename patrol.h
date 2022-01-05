@@ -14,8 +14,8 @@
 #define ROOT_MAX			(12)
 
 // ステージ２
-#define ROOT_MAX2			(7)
-#define ROOT_MAX2_1			(7)
+#define ROOT_MAX2			(8)
+#define ROOT_MAX2_1			(10)
 
 
 // ステージ３
