@@ -145,6 +145,7 @@
     <ClCompile Include="scene.cpp" />
     <ClCompile Include="select_scene.cpp" />
     <ClCompile Include="slime_1.cpp" />
+    <ClCompile Include="slime_2.cpp" />
     <ClCompile Include="sound.cpp" />
     <ClCompile Include="sprite.cpp" />
     <ClCompile Include="Texture.cpp" />

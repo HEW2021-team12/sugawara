@@ -17,7 +17,7 @@
 #define SLIME_MAX		(1)
 
 // ステージ２
-#define SLIME_MAX		(1)
+#define SLIME_MAX2		(1)
 
 // ステージ３
 #define SLIME_MAX		(1)
@@ -39,6 +39,9 @@ struct SLIME
 	float					w, h;		 // 幅と高さ
 	D3DXVECTOR2				pos;		 // ポリゴンの座標
 	D3DXVECTOR2				vel;		 // 移動量
+	D3DXVECTOR2				notmove;	 // 動けていない時用
+	D3DXVECTOR2				addmove;	 // 動けていない時の追加移動
+	bool					movecntX, movecntY;
 	float					u;
 	float					v;
 	float					uh;
@@ -66,3 +69,11 @@ void UpdateSlime(void);
 void DrawSlime(void);
 SLIME* GetSlime(void);
 BABBLE** GetBabble(void);
+
+// ステージ2
+HRESULT InitSlime2(void);
+void UninitSlime2(void);
+void UpdateSlime2(void);
+void DrawSlime2(void);
+SLIME* GetSlime2(void);
+BABBLE** GetBabble2(void);

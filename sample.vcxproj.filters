@@ -111,6 +111,9 @@
     <ClCompile Include="patrol_2.cpp">
       <Filter>ソース ファイル\STAGE2</Filter>
     </ClCompile>
+    <ClCompile Include="slime_2.cpp">
+      <Filter>ソース ファイル\STAGE2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">

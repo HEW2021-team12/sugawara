@@ -18,6 +18,7 @@
 #include "map.h"
 #include "sound.h"
 #include "timer.h"
+#include "slime.h"
 
 /*------------------------------------------------------------------------------
    íËêîíËã`
@@ -45,6 +46,7 @@ void InitGame2(void)
 {
 	InitPlayer();
 	InitEnemy2();
+	InitSlime2();
 	InitMap2();
 	//InitGasGauge();
 	InitTimer();
@@ -64,6 +66,7 @@ void UninitGame2(void)
 	UninitMap2();
 	UninitPlayer();
 	UninitEnemy2();
+	UninitSlime2();
 	//UninitGasGauge();
 	UninitTimer();
 }
@@ -75,6 +78,7 @@ void UpdateGame2(void)
 {
 	UpdateMap2();
 	UpdateEnemy2();
+	UpdateSlime2();
 	UpdatePlayer();
 	//UpdateGasGauge();
 	
@@ -99,6 +103,7 @@ void DrawGame2(void)
 	DrawMap2();
 	DrawPlayer();
 	DrawEnemy2();
+	DrawSlime2();
 	//DrawGasGauge();
 	DrawTimer();
 }
