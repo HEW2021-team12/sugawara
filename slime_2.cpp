@@ -93,8 +93,8 @@ HRESULT InitSlime2(void)
 		// スライムUV
 		g_Slime2[i].u = 0.0f;
 		g_Slime2[i].v = 0.0f;
-		g_Slime2[i].uh = 1.0f;
-		g_Slime2[i].vh = 1.0f;
+		g_Slime2[i].uh = 5.0f;
+		g_Slime2[i].vh = 2.0f;
 	}
 
 	// 巡回ルート設定
@@ -219,18 +219,7 @@ void DrawSlime2(void)
 	}
 }
 
-//=============================================================================
-// スライム構造体の先頭アドレスを取得
-//=============================================================================
-SLIME* GetSlime2(void)
-{
-	return g_Slime2;
-}
 
-BABBLE** GetBabble2(void)
-{
-	return g_Babble2;
-}
 
 // バブルを発生させる
 void SetBabble2(int i, D3DXVECTOR2 pos)
@@ -568,3 +557,15 @@ bool SerchPlayerSlime2(D3DXVECTOR2 Playerpos, D3DXVECTOR2 Enemypos)
 }
 
 
+//=============================================================================
+// スライム構造体の先頭アドレスを取得
+//=============================================================================
+SLIME* GetSlime2(void)
+{
+	return g_Slime2;
+}
+
+BABBLE** GetBabble2(void)
+{
+	return g_Babble2;
+}
