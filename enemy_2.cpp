@@ -355,7 +355,7 @@ void WatchEnemy2(int i)
 
 		//ˆÚ“®Œã‚ÌˆÊ’u‚ðŒvŽZ
 		g_Enemy2[i].pos.x += direction.x * FIND_SPD;
-		if (GetMapEnter(D3DXVECTOR2(g_Enemy2[i].pos.x + direction.x * FIND_SPD, g_Enemy2[i].pos.y))
+		if (GetMapEnter2(D3DXVECTOR2(g_Enemy2[i].pos.x + direction.x * FIND_SPD, g_Enemy2[i].pos.y))
 			== 1)
 		{
 			g_Enemy2[i].pos.x -= direction.x * FIND_SPD;
@@ -373,7 +373,7 @@ void WatchEnemy2(int i)
 		}
 
 		g_Enemy2[i].pos.y += direction.y * FIND_SPD;
-		if (GetMapEnter(D3DXVECTOR2(g_Enemy2[i].pos.x, g_Enemy2[i].pos.y + direction.y * FIND_SPD))
+		if (GetMapEnter2(D3DXVECTOR2(g_Enemy2[i].pos.x, g_Enemy2[i].pos.y + direction.y * FIND_SPD))
 			== 1)
 		{
 			g_Enemy2[i].pos.y -= direction.y * FIND_SPD;
